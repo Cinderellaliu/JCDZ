@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/webuploader.css">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/media.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="grey-bg">
+<div class="top-title clearfix">
+    <a href="#" class="back-btn" onclick="history.go(-1)"></a><span class="evaluate">Evaluate</span>
+    <a href="#" class="pull-right publish-btn">Give out</a>
+</div>
+<div class="main-content no-padding">
+	<div class="p-top01">
+		<div class="evaluate-box">
+		    <textarea class="evaluate-text" name="" rows="5">Does the product meet your expectations? Tell them about their strengths and weaknesses</textarea>
+		    <div class="evaluate-upload clearfix">
+                <div id="fileList" class="evaluate-list clearfix">
+                    <div id="filePicker" class="evaluate-picker pull-left"><img src="../images/upload_p.png" alt=""></div>
+                </div>
+                
+		    </div>	    
+	    </div>
+	    
+	</div>
+	<div class="p-top01">
+		<div class="point-box">
+			<em class="pul-left">Score</em>
+			<div class="pull-right star-box clearfix">
+				<span class="active"></span>
+				<span class="active"></span>
+				<span class="active"></span>
+				<span class="active"></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/webuploader.min.js"></script>
+<script>
+    $(function(){
+    		var uploader = WebUploader.create({
+	        auto:true,
+	        swf: '../css/Uploader.swf',
+	        // server: '../js/up.php',
+	        pick: '#filePicker',
+	        resize: false,
+	        fileNumLimit: 9,
+                accept: {
+                    title: 'Images',
+                    extensions: 'jpg,png',
+                    mimeTypes: 'image/*'
+                }
+	    });
+
+	    //上传时显示文件信息
+	    uploader.on( 'fileQueued', function( file ) {
+	        var item =$('<div class="evaluate-group pull-left"><div id="'+file.id+'"class="file-item thumbnail evaluate-pic">'+'<img/></div>');
+	        var img = item.find('img');
+	        uploader.makeThumb(file,function(error,src){
+	            img[0].src=src;
+	            
+	        },100,100);
+	        $('.evaluate-list .evaluate-picker').before(item);
+	    });
+//	    上传图片
+		$(".star-box span").click(function(){
+			$(this).toggleClass("active");
+		})
+//		星星打分效果
+    });
+</script>
+</script>
+</body>
+</html>

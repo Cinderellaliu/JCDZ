@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../js/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" type="text/css" />
+    <link href="../js/bootstrap-touchspin/bootstrap.touchspin.css" rel="stylesheet" type="text/css" />
+    <!--点击变换数字-->
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/media.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="top-section" id="top">
+	<div class="container">
+		<div class="top-left pull-left">
+			<div class="logo clearfix">
+				<img src="../images/logo.png" />
+				<span>jicheng custom</span>
+			</div>
+			<p class="logo-url">www.muqidz.com</p>
+		</div>
+		<div class="top-center pull-left">
+			<div class="clearfix">
+				<div class="top-center-left pull-left">
+					<div class="select-city pull-left">
+						<input type="text" value="Nanj...[Switch]" size="15" id="getcity_name" name="getcity_name" mod="address|notice" mod_address_source="hotel" mod_address_suggest="@Beijing|北京|53@Shanghai|上海|321@Shenzhen|深圳|91@Guangzhou|广州|80@Qingdao|青岛|292@Chengdu|成都|324@Hangzhou|杭州|383@Wuhan|武汉|192@Tianjin|天津|343@Dalian|大连|248@Xiamen|厦门|61@Chongqing|重庆|394@" mod_address_reference="getcityid" />
+						<input id="getcityid" name="getcityid" type="hidden" value="{$getcityid}" />
+					</div>
+					<div id="jsContainer" class="jsContainer" style="height:0">
+					    <div id="tuna_alert" style="display:none;position:absolute;z-index:999;overflow:hidden;"></div>
+					    <div id="tuna_jmpinfo" style="visibility:hidden;position:absolute;z-index:120;"></div>
+					</div>
+					<div class="top-login pull-left"><span class="cutline">|</span>Welcome to jicheng, please <a data-toggle="modal" href="#myModal">login</a>/<a data-toggle="modal" href="#myModalRegister">Register</a></div>
+				</div>
+				<div class="top-center-right pull-right">
+					<a href="#">Orders</a>
+					<a href="#">Cart</a>				
+					<a href="#" class="myaccount-btn">Account</a>
+					<div class="myaccount-content">						
+						<span class="bot"></span>  
+						<span class="top"></span>  
+						<a href="#">Messages</a>
+						<a href="#">Order</a>
+						<a href="#">Businesses</a>
+						<a href="#">Help</a>						
+					</div>
+				</div>
+			</div>
+			<div class="search-box clearfix">
+				<select class="bs-select form-control">
+					<option>ALL</option>
+					<option>Shop</option>
+				</select>  
+				<input type="text" placeholder="Enter search content" />
+				<button class="btn search-btn">Search</button>
+			</div>
+		</div>
+		<div class="top-right pull-left">
+			<div class="code-box pull-right text-center">
+				<img src="../images/code.png" />
+				<p>Download APP</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="main-content">
+    <div class="container">
+        <div class="main-progress">
+            <div class="progress-box">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
+                        <span class="sr-only">25% Complete</span>
+                    </div>
+                </div>
+                <div class="progress-txt progress-txt-left">1</div>
+                <div class="progress-txt progress-txt-center">2</div>
+                <div class="progress-txt progress-txt-right">3</div>
+            </div>
+            <ul class="progress-font">
+                <li class=" progress-font-left">Trade options</li>
+                <li class=" progress-font-center">Upload entry information</li>
+                <li class=" progress-font-right">Fill in information</li>
+            </ul>
+        </div>
+        <div class="main-settled">
+            <div class="main-industry">
+                <div class="main-set-title clearfix">
+                    <div class="main-set-txt">Trade options</div>
+                </div>
+                <div class="main-set-content">
+                    <ul class="main-set-group clearfix">
+                        <li class="main-set-option pull-left">
+                            <img src="../images/set1.png" alt="服装" class="main-option-image main-option-active">
+                            <p class="main-option-txt text-center">Clothing</p>
+                        </li>
+                        <li class="main-set-option pull-left">
+                            <img src="../images/set2.png" alt="家居" class="main-option-image">
+                            <p class="main-option-txt text-center">Home improvement</p>
+                        </li>
+                        <li class="main-set-option pull-left">
+                            <img src="../images/set3.png" alt="电器" class="main-option-image">
+                            <p class="main-option-txt text-center">Intelligent electrica</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-infor">
+                <div class="main-set-title clearfix">
+                    <div class="main-set-txt">Upload entry information</div>
+                </div>
+                <div class="main-set-content clearfix">
+                    <div class="main-set-card clearfix pull-left">
+                       <h4 class="main-card-title pull-left">Corporate ID card front:</h4>
+                       <div class="main-card-btn pull-left text-center" id="add-card-front">
+                           <img src="../images/add2.png" alt="添加按钮" class="main-card-image">
+                           <p class="main-card-txt">Upload</p>
+                       </div>
+                    </div>
+                    <div class="main-set-card clearfix pull-left">
+                       <h4 class="main-card-title main-card-title1 pull-left">Reverse side:</h4>
+                       <div class="main-card-btn pull-left text-center" id="add-card">
+                           <img src="../images/add2.png" alt="添加按钮" class="main-card-image">
+                           <p class="main-card-txt">Upload</p>
+                       </div>
+                    </div>
+                    <div class="main-set-card clearfix clear">
+                       <h4 class="main-card-title pull-left">Business certificate：</h4>
+                       <div class="main-card-btn pull-left text-center" id="add-card">
+                           <img src="../images/add2.png" alt="添加按钮" class="main-card-image">
+                           <p class="main-card-txt">Upload</p>
+                       </div>
+                    </div>
+                    <div class="main-set-card clearfix clear">
+                       <h4 class="main-card-title pull-left">Business license：</h4>
+                       <div class="main-card-btn pull-left text-center" id="add-card">
+                           <img src="../images/add2.png" alt="添加按钮" class="main-card-image">
+                           <p class="main-card-txt">Upload</p>
+                       </div>
+                    </div>                  
+                </div>
+            </div>
+            <div class="main-write">
+                <div class="main-set-title clearfix">
+                    <div class="main-set-txt">Fill in information</div>
+                </div>
+                <div class="main-set-content">
+                    <form action="">
+                        <div class="main-enter clearfix">
+                            <ul class="main-enter-bus pull-left">
+                                <li>
+                                    <label>Company name：</label><input type="text" value="Apple">
+                                </li>
+                                <li>
+                                    <label for="">Enterprise Address：</label><input type="text" value="Nanjing City, Jiangs...">
+                                </li>
+                                <li>
+                                    <label for="">Business license number:</label><input type="text" value="12354789">
+                                </li>
+                                <li>
+                                    <label for="">Telephone：</label><input type="text" value="400-45789658">
+                                </li>
+                                <li>
+                                    <label for="">Business Scope of Enterprise：</label><input type="text" value="Clothing">
+                                </li>
+                            </ul>
+                            <ul class="main-enter-admin pull-left">
+                                <li>
+                                    <label >Name of enterprise administrator:</label><input type="text" value="muqi">
+                                </li>
+                                <li>
+                                   <label for="">Administrator id no.:</label><input type="text" value="320265196836084569">
+                                </li>
+                                <li>
+                                    <label for="">Administrative Contact</label><input type="text" value="18968796356">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="main-user">
+                            <ul class="main-user-info">
+                                <li>
+                                    <label for="">Username:</label><input type="text" value="muqidz">
+                                </li>
+                                <li>
+                                    <label for="">Set a password :</label><input type="text" value="123654">
+                                </li>
+                                <li>
+                                    <label for="">Confirm Password:</label><input type="text" value="123654">
+                                </li>
+                            </ul>
+                            <button class="main-user-btn">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottom-section01">
+	<div class="container clearfix">
+		<div class="icon-text pull-left"><img src="../images/cust.png" /></div>
+		<div class="pull-left icon-box-right">
+			<div class="icon-box pull-left clearfix">
+				<img src="../images/bottom_icon01.png" class="pull-left" />
+				<h1 class="pull-left"><span>Safe</span><p>The professional team is safe and converient</p></h1>
+			</div>
+			<div class="icon-box pull-left clearfix">
+				<img src="../images/bottom_icon02.png" class="pull-left" />
+				<h1 class="pull-left"><span>Low Price</span><p>The big names are str-alight for the good</p></h1>
+			</div>
+			<div class="icon-box pull-left clearfix">
+				<img src="../images/bottom_icon03.png" class="pull-left" />
+				<h1 class="pull-left"><span>Easy</span><p>Fast and efficient one-button shopping</p></h1>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="bottom-section02">
+	<div class="container clearfix">
+		<div class="left-menu pull-left">
+			<div class="left-menu-list pull-left">
+				<h1>Guide</h1>
+				<a href="#">process</a>
+				<a href="#">User Agreement</a>
+				<a href="#">VIP Rules</a>
+				<a href="#">Order Status</a>
+				<a href="#">Common Problem</a>				
+			</div>
+			<div class="left-menu-list pull-left">
+				<h1>shopping</h1>
+				<a href="#">Courter Services</a>
+				<a href="#">Logistics Distribution</a>
+				<a href="#">Onsite Services</a>
+				<a href="#">Stores must</a>			
+			</div>
+			<div class="left-menu-list pull-left">
+				<h1>Mode of Payment</h1>
+				<a href="#">Cash on Delivery</a>
+				<a href="#">Online Pay</a>
+				<a href="#">Transfer</a>
+				<a href="#">By Cheque</a>			
+			</div>
+			<div class="left-menu-list pull-left">
+				<h1>After-sale Service</h1>
+				<a href="#">Receiving inspection</a>
+				<a href="#">Refund</a>
+				<a href="#">Return and exchange rules</a>			
+			</div>
+		</div>
+		<div class="right-tel pull-right">
+			<div class="tel-box clearfix">
+				<h2 class="pull-left"><img src="../images/bottom_icon04.png" /></h2>
+				<h1 class="pull-left"><span>Join Hotline</span><span>400-123-6789</span></h1>
+			</div>
+			<div class="tel-box clearfix">
+				<h2 class="pull-left"><img src="../images/bottom_icon05.png" /></h2>
+				<h1 class="pull-left">
+					<span>Inviting Tenders</span>
+					<span>Mr.Liang：13998986666</span>
+					<span>Mr.Zhu：13998986666</span>
+					<span>Mr.Wang：13998986666</span>
+				</h1>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="bottom-section03">
+	<div class="container bottom-menu clearfix">
+		<a href="#">About Us</a>
+		<span>|</span>
+		<a href="#">Contact Us</a>
+		<span>|</span>
+		<a href="#">Contact Customer</a>
+		<span>|</span>
+		<a href="#">Cooperation</a>
+		<span>|</span>
+		<a href="#">Merchants help</a>
+		<span>|</span>
+		<a href="#">FriendLink</a>
+		<span>|</span>
+		<a href="#">Merchants settled</a>
+	</div>
+	<p><span>Value-added telecom business license：浙 B2-20080224 </span><span class="bottom-talk">Internet illegal and bad information report telephone：0571-81683755</span></p>
+	<p>Copyright © 2018-2047 Jicheng Company</p> 
+	<p>Company address：no 020 archery,qinhuai disstrict,jiangsu province</p>
+	<div class="link-img">
+		<div class="container text-center">
+			<a href="#"><img src="../images/bottom_link_pic01.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic02.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic03.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic04.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic05.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic06.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic07.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic08.png" /></a>
+		</div>
+	</div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/top_menu.js"></script>
+<!--下拉菜单-->
+<script src="../js/app.min.js"></script>
+<script src="../js/bootstrap-select/js/bootstrap-select.min.js" type="text/javascript"></script>
+<script src="../js/components-bootstrap-select.min.js" type="text/javascript"></script>
+<!--下拉菜单-->
+<!--城市选择插件-->
+<script type="text/javascript" src="../js/fixdiv.js"></script>
+<script type="text/javascript" src="../js/address.js"></script>
+<!--城市选择插件-->
+<script src="../js/webuploader.min.js" type="text/javascript"></script>
+<script>
+    var uploader = WebUploader.create({
+        auto:true,
+        swf: '../css/Uploader.swf',
+        // server: '../js/up.php',
+        pick: '#add-card-front',
+        resize: false,
+        fileNumLimit: 1,
+        accept: {
+            title: 'Images',
+            extensions: 'gif,jpg,jpeg,bmp,png',
+            mimeTypes: 'image/*'
+        }
+    });
+
+    //上传时显示文件信息
+    uploader.on( 'fileQueued', function( file ) {
+        var item =$('<div class="main-card-box pull-left"><div id="'+file.id+'"class="file-item thumbnail">'+'<img class="main-card-pic">'+'</div></div>');
+        var img = item.find('img');
+        uploader.makeThumb(file,function(error,src){
+            img[0].src=src;
+        },92,92);
+        $('#add-card-front').html(item);
+    });
+
+    $('.main-set-group').on('click','.main-set-option',function(){
+        $(this).find('img').addClass('main-option-active');
+        $(this).siblings('.main-set-option').find('img').removeClass('main-option-active');
+    })
+
+</script>
+</body>
+</html>

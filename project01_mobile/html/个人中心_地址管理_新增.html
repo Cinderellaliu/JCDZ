@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/LArea.min.css">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/media.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="grey-bg">
+<div class="top-title">
+    <a href="#" class="back-btn" onclick="history.go(-1)"></a><span>收货地址</span>
+</div>
+<div class="main-content no-padding">
+	<div class="p-top01">
+		<form>
+	        <div class="receive-add-box">
+	        		<div class="form-group receive-box clearfix">
+			        	<label for="receive-people" class="control-label pull-left">收货人</label>
+			        	<div class="control-input pull-left">
+			        		<input type="text" id="receive-people" class="form-control">
+			        	</div> 	
+			        </div>
+			        <div class="form-group receive-box clearfix">
+			        	<label for="receive-tel" class="control-label pull-left">联系电话</label>
+			        	<div class="control-input pull-left">
+			        		<input type="text" id="receive-tel" class="form-control">
+			        	</div> 	
+			        </div>
+			        <div class="form-group receive-box clearfix">
+			        	<label class="control-label pull-left">所在地区</label>
+			        	<a class="control-a pull-right">
+                            <img src="../images/right_arrow.png" alt="">
+                            <input type="text" value="请选择" readonly="" id="demo1" />
+                            <input id="value1" type="hidden" />
+			        	</a> 	
+			        </div>
+			        <div class="form-group receive-box clearfix">
+			        	<label for="receive-add" class="control-label pull-left">详细地址</label>
+			        	<div class="control-input pull-left">
+			        		<textarea  id="receive-add" rows="4" class="form-control " placeholder="请输入详细地址信息，如道路、门牌号、小区、楼栋号、单元室等"></textarea>
+			        	</div> 	
+			    </div>
+	        </div>	    
+			<div class="save-box">
+				<button type="button">保存</button>
+			</div>
+		</form>
+	</div>    
+</div>
+
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/LArea.min.js"></script>
+<script src="../js/LAreaData.js"></script>
+<script>
+    var area2 = new LArea();
+    area2.init({
+        'trigger': '#demo1',
+        'valueTo': '#value1',
+        'keys': {
+            id: 'value',
+            name: 'text'
+        },
+        'type': 2,
+        'data': [provs_data, citys_data, dists_data]
+    });
+
+    $('.control-a').click(function(){
+        $(this).find('img').hide();
+    })
+</script>
+</body>
+</html>

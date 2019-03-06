@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../js/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" type="text/css" />
+    <link href="../js/bootstrap-touchspin/bootstrap.touchspin.css" rel="stylesheet" type="text/css" />
+    <!--点击变换数字-->
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/media.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="top-section" id="top">
+	<div class="container">
+		<div class="top-left pull-left">
+			<div class="logo clearfix">
+				<img src="../images/logo.png" />
+				<span>jicheng custom</span>
+			</div>
+			<p class="logo-url">www.muqidz.com</p>
+		</div>
+		<div class="top-center pull-left">
+			<div class="clearfix">
+				<div class="top-center-left pull-left">
+					<div class="select-city pull-left">
+						<input type="text" value="Nanj...[Switch]" size="15" id="getcity_name" name="getcity_name" mod="address|notice" mod_address_source="hotel" mod_address_suggest="@Beijing|北京|53@Shanghai|上海|321@Shenzhen|深圳|91@Guangzhou|广州|80@Qingdao|青岛|292@Chengdu|成都|324@Hangzhou|杭州|383@Wuhan|武汉|192@Tianjin|天津|343@Dalian|大连|248@Xiamen|厦门|61@Chongqing|重庆|394@" mod_address_reference="getcityid" />
+						<input id="getcityid" name="getcityid" type="hidden" value="{$getcityid}" />
+					</div>
+					<div id="jsContainer" class="jsContainer" style="height:0">
+					    <div id="tuna_alert" style="display:none;position:absolute;z-index:999;overflow:hidden;"></div>
+					    <div id="tuna_jmpinfo" style="visibility:hidden;position:absolute;z-index:120;"></div>
+					</div>
+					<div class="top-login pull-left"><span class="cutline">|</span>Welcome to jicheng, please <a data-toggle="modal" href="#myModal">login</a>/<a data-toggle="modal" href="#myModalRegister">Register</a></div>
+				</div>
+				<div class="top-center-right pull-right">
+					<a href="#">Orders</a>
+					<a href="#">Cart</a>				
+					<a href="#" class="myaccount-btn">Account</a>
+					<div class="myaccount-content">						
+						<span class="bot"></span>  
+						<span class="top"></span>  
+						<a href="#">Messages</a>
+						<a href="#">Order</a>
+						<a href="#">Businesses</a>
+						<a href="#">Help</a>						
+					</div>
+				</div>
+			</div>
+			<div class="search-box clearfix">
+				<select class="bs-select form-control">
+					<option>ALL</option>
+					<option>Shop</option>
+				</select>  
+				<input type="text" placeholder="Enter search content" />
+				<button class="btn search-btn">Search</button>
+			</div>
+		</div>
+		<div class="top-right pull-left">
+			<div class="code-box pull-right text-center">
+				<img src="../images/code.png" />
+				<p>Download APP</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="menu-section">
+		<ul class="container clearfix">
+			<li>
+				<a href="/" class="red-text">Category</a>
+			</li>
+			<li>
+				<a href="index02.html" class="red-text sub-menu-btn">Home</a>
+				<ul class="sub-menu">
+					<li class="container">
+						<ul>
+							<li><a href="#">men’s wear</a></li>
+                            <li><a href="#">women’s wear</a></li>
+                            <li><a href="#">Children's wear</a></li>
+                            <li><a href="#">Middle-aged</a></li>
+						</ul>						
+					</li>					
+				</ul>
+			</li>
+			<li><a href="#">Custom-Made</a></li>
+			<li><a href="#">Craftsman</a></li>
+			<li><a href="#">International</a></li>
+			<li><a href="#">Store alliance</a></li>
+			<li><a href="#">Furniture</a></li>
+			<li><a href="#">Intellectual</a></li>
+			<li><a href="#">Business</a></li>
+			<li><a href="#">Quality</a></li>
+			<li><a href="#">News</a></li>
+		</ul>		
+</div>
+<div class="main-content">
+	<div class="container">
+		<div class="mall">
+			<div class="mall-custom">
+				<span>Jicheng Custom Mall</span>
+				<i class="glyphicon glyphicon-menu-right"></i>
+				<span>Clothing Mall</span>
+				<i class="glyphicon glyphicon-menu-right"></i>
+				<span>Women</span>
+				<i class="glyphicon glyphicon-menu-right"></i>
+				<b>The smart camera is white</b>
+			</div>
+			<div class="shoes">
+				<div class="detail-left-box pull-left">
+                    <div class="exp-pic">
+                        <div class="show">
+                            <div class="item clearfix">
+                                <a class="big-photo">
+                                    <img src="../images/shoes-big.png" alt="big"/>
+                                </a>
+                                <a class="des-small">
+                                    <img src="../images/shoes-big.png" alt="small"/>
+                                </a>
+                                <a class="des-small">
+                                    <img src="../images/detail_pic01.png" alt="small"/>
+                                </a>
+                                <a class="des-small">
+                                    <img src="../images/detail_pic02.png" alt="small"/>
+                                </a>
+                                <a class="des-small">
+                                    <img src="../images/detail_pic03.png" alt="small"/>
+                                </a>
+                                <a class="des-small">
+                                    <img src="../images/detail_pic04.png" alt="small"/>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="enjoy">
+                            <a href="" class="star">
+                                <img src="../images/star.png" alt="" class="star1"><span>Add to wishlist</span>
+                            </a>
+                            <a href="" class="en">
+                                <img src="../images/enjoy.png" alt="" class='enjoy1'>
+                                <span>Share</span>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="exp-shoes">
+                        <h4>The smart camera is white</h4>
+						<h5>A rief introduction to the family's smart camera procucts</h5>
+                        <div class="sale">
+                            <div class="sale-bg clearfix">
+	                            <p class="price">Price：<span>$158</span></p>
+	                            <div class="volume">Gross Sale</br><span>498</span></div>
+	                            <div class="evaluate">Overall Merit</br><span>9999+</span></div>
+	                            <p class="batch">Batches：<span>99</span></p>
+	                            <p class="service">Service：<span>Jicheng Custom</span>provide after-sales service</p>
+                            </div>
+                            <div class='mode mo clearfix'>
+                                <i>Shipping：</i>
+                                <div class="address-select"><input class="input" name="" id="city" type="text" placeholder="Nanjing,jiangsu..." autocomplete="off" readonly="true"/><s></s></div>       
+                                <div id="postage">
+                                	<select class="bs-select form-control">
+										 <option value="">Free mail</option>
+		                                 <option value="">$5</option>
+		                                 <option value="">$12</option>
+									</select>  
+                                </div>                                
+                            </div>
+                            <div class="type">
+                                <div class="color">Color：</div>
+                                <div class="all-pic">
+                                    <a href="#"><img src="../images/shoes-black.png" alt=""></a>
+                                    <a href="#"><img src="../images/shoes-grey.png" alt=""></a>
+                                    <a href="#"><img src="../images/shoes-light.png" alt=""></a>
+                                    <a href="#"><img src="../images/shoes-red.png" alt=""></a>
+                                    <a href="#"><img src="../images/shoes-orange.png" alt=""></a>
+                                    <a href="#"><img src="../images/shoes-purple.png" alt=""></a>
+                                    <a href="#"><img src="../images/shoes-lightblue.png" alt=""></a>
+                                    <a href="#"><img src="../images/shoes-blue.png" alt=""></a>
+                                    <a href="#"><img src="../images/shoes-pink.png" alt=""></a>
+                                    <a href="#"><img src="../images/space.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="spec">
+                                <i>SIZE：</i>
+                                <div class="all-spec clearfix">
+                                    <a href="#"><span>35</span></a>
+                                    <a href="#"><span>36</span></a>
+                                    <a href="#"><span>37</span></a>
+                                    <a href="#"><span>38</span></a>
+                                    <a href="#"><span>39</span></a>
+                                    <a href="#"><span>40</span></a>
+                                    <a href="#"><span>41</span></a>
+                                    <a href="#"><span>42</span></a>
+                                    <a href="#"><span>43</span></a>
+                                    <a href="#"><span>44</span></a>
+                                </div>
+                            </div>
+                            <div class="num">
+                                <span class="amount">Number：</span>
+                                <div class="num-box">
+                                    <input class="touchspin_5" type="text" value="1" name="demo3_21">
+                                </div>
+                                <span class="stock">Inventory：
+    								<i class="quantity">999</i>
+    							</span>
+                            </div>
+                            <div class="btn1 btn-buy">
+                                <button class="buy">Buy now</button>
+                                <button class="car">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				<div class="custom pull-left">
+					<img src="../images/custom-logo.png" alt="" class="custom-logo">
+					<div class="shop-mall">
+						<h4>Jicheng Custom</h4>
+						<p class="clearfix"><span>Total score:</span><span class="total">5.00</span></p>
+						<p class="clearfix"><span>Location：</span><span class="location">AK.Juneau</span></p>
+						<p class="clearfix"><span>Contact：</span><i class="glyphicon glyphicon-headphones"></i></p>
+						<div class="line"></div>	
+					</div>
+					<div class="compare">
+						<div class="detail">
+							<p>Score detail</p>
+							<p>Good<span>5.0</span></p>
+							<p>Service<span>5.0</span></p>
+							<p>Eta<span>5.0</span></p>
+						</div>
+						<div class="peer">
+							<p>Compare</p>
+							<p>48%<span class="glyphicon glyphicon-arrow-up"></span></p>
+							<p>51%<span class="glyphicon glyphicon-arrow-up"></span></p>
+							<p>39%<span class="glyphicon glyphicon-arrow-up"></span></p>
+						</div>
+						<div class="line line2"></div>
+					</div>
+					<div class="shop">
+						<button class="go-shop">Into the shop</button>
+						<button class="follow">Pay attention</button>
+					</div>
+				</div>
+		    </div>
+			<div class="recommend">
+				<div class="shopowner">Recommends</div>
+				<div class="list-goods clearfix">
+					<div class="goods">
+						<img src="../images/list-pic-small1.png" alt="">
+						<p>$299</p>
+						<h5>90 cent silver anal T-shirt</h5>
+					</div>
+					<div class="goods">
+						<img src="../images/list-pic-small2.png" alt="">
+						<p>$299</p>
+						<h5>90 cent silver anal T-shirt</h5>
+					</div>
+					<div class="goods">
+						<img src="../images/list-pic-small3.png" alt="">
+						<p>$299</p>
+						<h5>90 cent silver anal T-shirt</h5>
+					</div>
+					<div class="goods">
+						<img src="../images/list-pic-small4.png" alt="">
+						<p>$299</p>
+						<h5>90 cent silver anal T-shirt</h5>
+					</div>
+					<div class="goods">
+						<img src="../images/list-pic-small5.png" alt="">
+						<p>$299</p>
+						<h5>90 cent silver anal T-shirt</h5>
+					</div>
+					<div class="goods">
+						<img src="../images/list-pic-small6.png" alt="">
+						<p>$299</p>
+						<h5>90 cent silver anal T-shirt</h5>
+					</div>
+				</div>			
+			</div>
+			<div class="product-detail-box clearfix">
+				<div class="bs-example bs-example-tabs introduction" data-example-id="togglable-tabs">
+                    <ul id="myTabs" class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#tab01" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Introduction</a></li>
+                        <li role="presentation"><a href="#tab02" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Specification</a></li>
+                        <li role="presentation"><a href="#tab03" role="tab" id="profile-tab" data-toggle="tab" aria-controls="tab03">Evaluate（999+）</a></li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="tab01" aria-labelledby="home-tab">
+                            <div class="product-detail">
+			        		   <div class="product-detail-list clearfix">
+    			        			<div class="product-detail-left pull-left">
+    			        				<label>Material</label>
+    			        				<div>Patent leather</div>
+    			        			</div>
+    			        			<div class="product-detail-left pull-left">
+    			        				<label>Target User</label>
+    			        				<div>Women</div>
+    			        			</div>
+                                </div>
+    			        		<div class="product-detail-list clearfix">
+    			        			<label>Contain chemicals</label>
+    			        			<div class="m-space">No</div>
+    			        		</div>
+    			        		<div class="product-detail-list clearfix">
+    			        			<label>Style</label>
+    			        			<div>Baike,commuting,Japan and South Korea</div>
+    			        		</div>
+    			        		<div class="product-detail-list clearfix">
+    			        			<label>Size</label>
+    			        			<div>34（220），35（225），36（230），37（235），38（240），39（245），40（250）</div>
+    			        		</div>
+    			        		<div class="product-detail-list no-border clearfix">
+    			        			<label>TIPS</label>
+    			        			<div class="cozy-text">
+    								<span>1.The aelection belongs to the close communication of the goods.</span>
+    								<span>2.Material properties,please do not wipe the maintenance,will affect the luster.</span>
+    								<span>3.Please wrap properly when not wearing,so as to avoid role transfer,please keep distance.</span>
+    							</div>
+    			        		</div>										
+    								<img src="../images/list-pic1.png" alt="">
+    								<img src="../images/list-pic2.png" alt="">
+    								<img src="../images/list-pic3.png" alt="">
+    								<img src="../images/list-pic4.png" alt="" class='end'>
+    			                </div>
+			                </div>
+			            <div role="tabpanel" class="tab-pane fade" id="tab02" aria-labelledby="profile-tab">
+                            <p>02</p>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="tab03" aria-labelledby="profile-tab">
+                            <div>
+        				        <div class="comment">
+        				        	<div class="overall-merit">
+        				        		<div class="left-evaluate">
+        				        			<h5>Overall</h5>
+        				        			<h2>4.9</h2>
+        				        		</div>
+        				        		<div class="right-evaluate">
+        				        			<button class="all-btn">all</button>
+        				        			<button class="good-btn">Praise</button>
+        				        			<button class="review-btn">Medium</button>
+        				        			<button class="bad-btn">Poor</button>
+        				        			<button class="pic-btn">Image</button>
+        				        		</div>
+        				        	</div>
+        				        	<div class="all-talk">
+        				        		<div class="left-pic">
+        					        		<div class="head-pic">
+        					        			<img src="../images/pic-slist1.png" alt="">
+        					        			<span>Jerry</span>
+        					        		</div>
+        					        	</div>
+        					        	<div class="right-inf">
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<span class="talk">Suitable for any type of chair hammock!</span>
+        					        		<span class="time">2018-04-09 09:49</span>
+        					        	</div>
+        				        	</div>
+        				        	<div class="all-talk">
+        				        		<div class="left-pic">
+        					        		<div class="head-pic">
+        					        			<img src="../images/pic-slist2.png" alt="">
+        					        			<span>Peter</span>
+        					        		</div>
+        					        	</div>
+        					        	<div class="right-inf">
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<span class="talk">Suitable for any type of chair hammock!Suitable for any type Suitable for any type of chair hammock!</span>
+        					        		<span class="time ti">2018-04-09 09:49</span>
+        					        		<span class="reply">Jicheng customized mall replay：</span>
+        					        		<span class="reply-talk">Dear cstomers,all the products in this store are genuine guarantee.</br>
+        					        		We have 7 days wi100 per cent grarantee,you can be trusted to</br>
+        					        		Whis you a happy life!</span>
+        					        		<span class='time'>2018-04-09 09:49</span>
+        					        	</div>
+        				        	</div>
+        							<div class="all-talk">
+        				        		<div class="left-pic">
+        					        		<div class="head-pic">
+        					        			<img src="../images/pic-slist1.png" alt="">
+        					        			<span>Jerry</span>
+        					        		</div>
+        					        	</div>
+        					        	<div class="right-inf">
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<span class="talk">Text+picture comments</span>
+        					        		<div class="detail-pic">
+        					        			<a class="small-photo">
+        					        				<img src="../images/talk-list1.png" alt="talk-small">
+        					        			</a>
+        					        			<a class="small-photo">
+        					        				<img src="../images/talk-list2.png" alt="talk-small">
+        					        			</a>
+        					        			<a class="small-photo">
+        					        				<img src="../images/talk-list3.png" alt="talk-small">
+        					        			</a>
+        					        		</div>
+        					        		<a class="big-photo-talk detail-big">
+        					        			<img src="../images/big-pic.png" alt="talk-big" id='d-img'>
+        					        			<button class="btn-x" id="btn">X</button>
+        					        		</a>
+        					        		<span class="time">2018-04-09 09:49</span>
+        					        	</div>
+        				        	</div>
+        				        	<div class="all-talk">
+        				        		<div class="left-pic">
+        					        		<div class="head-pic">
+        					        			<img src="../images/pic-slist2.png" alt="">
+        					        			<span>Peter</span>
+        					        		</div>
+        					        	</div>
+        					        	<div class="right-inf">
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<span class="talk">Suitable for any type of chair hammock!Suitable for any type Suitable for any type of chair hammock!</span>
+        					        		<span class="time ti">2018-04-09 09:49</span>
+        					        		<span class="reply">Jicheng customized mall replay：</span>
+        					        		<span class="reply-talk">Dear cstomers,all the products in this store are genuine guarantee.</br>
+        					        		We have 7 days wi100 per cent grarantee,you can be trusted to</br>
+        					        		Whis you a happy life!</span>
+        					        		<span class='time'>2018-04-09 09:49</span>
+        					        	</div>
+        				        	</div>
+        				        	<div class="all-talk">
+        				        		<div class="left-pic">
+        					        		<div class="head-pic">
+        					        			<img src="../images/pic-slist1.png" alt="">
+        					        			<span>Jerry</span>
+        					        		</div>
+        					        	</div>
+        					        	<div class="right-inf">
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<span class="talk">Suitable for any type of chair hammock!</span>
+        					        		<span class="time">2018-04-09 09:49</span>
+        					        	</div>
+        				        	</div>
+        				        	<div class="all-talk">
+        				        		<div class="left-pic">
+        					        		<div class="head-pic">
+        					        			<img src="../images/pic-slist2.png" alt="">
+        					        			<span>Peter</span>
+        					        		</div>
+        					        	</div>
+        					        	<div class="right-inf">
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<span class="talk">Suitable for any type of chair hammock!Suitable for any type Suitable for any type of chair hammock!</span>
+        					        		<span class="time ti">2018-04-09 09:49</span>
+        					        		<span class="reply">Jicheng customized mall replay：</span>
+        					        		<span class="reply-talk">Dear cstomers,all the products in this store are genuine guarantee.</br>
+        					        		We have 7 days wi100 per cent grarantee,you can be trusted to</br>
+        					        		Whis you a happy life!</span>
+        					        		<span class='time'>2018-04-09 09:49</span>
+        					        	</div>
+        				        	</div>
+        				        	<div class="all-talk">
+        				        		<div class="left-pic">
+        					        		<div class="head-pic">
+        					        			<img src="../images/pic-slist1.png" alt="">
+        					        			<span>Jerry</span>
+        					        		</div>
+        					        	</div>
+        					        	<div class="right-inf">
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<span class="talk">Suitable for any type of chair hammock!</span>
+        					        		<span class="time">2018-04-09 09:49</span>
+        					        	</div>
+        				        	</div>
+        				        	<div class="all-talk">
+        				        		<div class="left-pic">
+        					        		<div class="head-pic">
+        					        			<img src="../images/pic-slist2.png" alt="">
+        					        			<span>Peter</span>
+        					        		</div>
+        					        	</div>
+        					        	<div class="right-inf">
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<span class="talk">Suitable for any type of chair hammock!Suitable for any type Suitable for any type of chair hammock!</span>
+        					        		<span class="time ti">2018-04-09 09:49</span>
+        					        		<span class="reply">Jicheng customized mall replay：</span>
+        					        		<span class="reply-talk">Dear cstomers,all the products in this store are genuine guarantee.</br>
+        					        		We have 7 days wi100 per cent grarantee,you can be trusted to</br>
+        					        		Whis you a happy life!</span>
+        					        		<span class='time'>2018-04-09 09:49</span>
+        					        	</div>
+        				        	</div>
+        				        	<div class="all-talk">
+        				        		<div class="left-pic">
+        					        		<div class="head-pic">
+        					        			<img src="../images/pic-slist1.png" alt="">
+        					        			<span>Jerry</span>
+        					        		</div>
+        					        	</div>
+        					        	<div class="right-inf">
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<span class="talk">Suitable for any type of chair hammock!</span>
+        					        		<span class="time">2018-04-09 09:49</span>
+        					        	</div>
+        				        	</div>
+        				        	<div class="all-talk talk-end">
+        				        		<div class="left-pic">
+        					        		<div class="head-pic">
+        					        			<img src="../images/pic-slist1.png" alt="">
+        					        			<span>Jerry</span>
+        					        		</div>
+        					        	</div>
+        					        	<div class="right-inf">
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<i class="glyphicon glyphicon-star"></i>
+        					        		<span class="talk">Suitable for any type of chair hammock!</span>
+        					        		<span class="time">2018-04-09 09:49</span>
+        					        	</div>
+        				        	</div>
+        				        </div>
+        				        <div class="end-page">
+        				        	<nav aria-label="Page navigation">
+                                        <ul class="pagination">
+        									<li class="disabled">
+        									    <a href="#" aria-label="Previous">
+        									        <span aria-hidden="true">Page Up</span>
+        									    </a>
+        									</li>
+        								    <li><a href="#" class="active">1</a></li>
+        								    <li><a href="#">2</a></li>
+        								    <li><a href="#">3</a></li>
+        								    <li><a href="#">...</a></li>
+        								    <li><a href="#">10</a></li>
+        								    <li>
+        								        <a href="#" aria-label="Next">
+        								            <span aria-hidden="true">Page Down</span>
+        								        </a>
+        								    </li>
+        								</ul>
+        								<span class="total">To page
+        								  	<input type="number" class="inp1" placeholder="1">
+        							  		<a href=""><input type="text" class="inp2" placeholder="sure"></a>
+        						  		</span>
+    								</nav>
+        				        </div>
+                            </div>
+    			        </div> 
+			        </div>
+			 	</div>					
+				<div class="inside-shop">
+					<div class="right-menu-box pull-left">
+						<ul>
+							<li><a href="javascript:void(0)" class="title">The store classification</a>
+							</li>		
+							<li><a href="javascript:void(0)" class="inactive">Mega Show</a>
+								<ul>
+									<li><a href="javascript:void(0)">菜单一</a></li> 
+									<li><a href="javascript:void(0)">菜单二</a></li> 
+								</ul>
+							</li>
+							<li><a href="javascript:void(0)" class="inactive">Clothing</a>
+								<ul> 
+									<li><a href="javascript:void(0)">菜单一</a></li> 
+									<li><a href="javascript:void(0)">菜单二</a></li>
+								</ul>
+							</li>
+							<li><a href="javascript:void(0)" class="inactive">The craftsman custom</a>
+								<ul>
+									<li><a href="javascript:void(0)">菜单一</a></li> 
+									<li><a href="javascript:void(0)">菜单二</a></li> 
+								</ul>
+							</li>
+							<li><a href="javascript:void(0)" class="inactive inactives">Intellectual electric apparatus</a>
+								<ul style="display: block;">
+									<li><a href="javascript:void(0)" class="active">Smart television</a></li> 
+									<li><a href="javascript:void(0)">Security and protection</a></li> 
+									<li><a href="javascript:void(0)">Router</a></li>
+									<li><a href="javascript:void(0)">Gateway</a></li>
+								</ul>
+							</li>			
+						</ul>
+					</div>
+					<div class="hot">
+						<p class="title">Hot product</p>
+						<div class="girl">
+							<img src="../images/girl.png" alt="">
+							<p class="pri">$239</p>
+							<p class="ti">90 cent silver anal T-shirt</p>
+							<p class="line"></p>
+						</div>
+						<div class="girl">
+							<img src="../images/girl.png" alt="">
+							<p class="pri">$239</p>
+							<p class="ti">90 cent silver anal T-shirt</p>
+							<p class="line"></p>
+						</div>
+						<div class="girl">
+							<img src="../images/girl.png" alt="">
+							<p class="pri">$239</p>
+							<p class="ti">90 cent silver anal T-shirt</p>
+							<p class="line"></p>
+						</div>
+						<div class="girl">
+							<img src="../images/girl.png" alt="">
+							<p class="pri">$239</p>
+							<p class="ti">90 cent silver anal T-shirt</p>
+							<p class="line"></p>
+						</div>
+						<div class="girl">
+							<img src="../images/girl.png" alt="">
+							<p class="pri">$239</p>
+							<p class="ti">90 cent silver anal T-shirt</p>
+						</div>
+					</div>
+					<div class="hot">
+						<p class="title">Hot focus products</p>
+						<div class="girl">
+							<img src="../images/girl.png" alt="">
+							<p class="pri">$239</p>
+							<p class="ti">90 cent silver anal T-shirt</p>
+							<p class="line"></p>
+						</div>
+						<div class="girl">
+							<img src="../images/girl.png" alt="">
+							<p class="pri">$239</p>
+							<p class="ti">90 cent silver anal T-shirt</p>
+							<p class="line"></p>
+						</div>
+						<div class="girl">
+							<img src="../images/girl.png" alt="">
+							<p class="pri">$239</p>
+							<p class="ti">90 cent silver anal T-shirt</p>
+							<p class="line"></p>
+						</div>
+						<div class="girl">
+							<img src="../images/girl.png" alt="">
+							<p class="pri">$239</p>
+							<p class="ti">90 cent silver anal T-shirt</p>
+							<p class="line"></p>
+						</div>
+						<div class="girl">
+							<img src="../images/girl.png" alt="">
+							<p class="pri">$239</p>
+							<p class="ti">90 cent silver anal T-shirt</p>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+		</div>
+	</div>
+</div>
+<div class="bottom-section01">
+	<div class="container clearfix">
+		<div class="icon-text pull-left"><img src="../images/cust.png" /></div>
+		<div class="pull-left icon-box-right">
+			<div class="icon-box pull-left clearfix">
+				<img src="../images/bottom_icon01.png" class="pull-left" />
+				<h1 class="pull-left"><span>Safe</span><p>The professional team is safe and converient</p></h1>
+			</div>
+			<div class="icon-box pull-left clearfix">
+				<img src="../images/bottom_icon02.png" class="pull-left" />
+				<h1 class="pull-left"><span>Low Price</span><p>The big names are str-alight for the good</p></h1>
+			</div>
+			<div class="icon-box pull-left clearfix">
+				<img src="../images/bottom_icon03.png" class="pull-left" />
+				<h1 class="pull-left"><span>Easy</span><p>Fast and efficient one-button shopping</p></h1>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="bottom-section02">
+	<div class="container clearfix">
+		<div class="left-menu pull-left">
+			<div class="left-menu-list pull-left">
+				<h1>Guide</h1>
+				<a href="#">process</a>
+				<a href="#">User Agreement</a>
+				<a href="#">VIP Rules</a>
+				<a href="#">Order Status</a>
+				<a href="#">Common Problem</a>				
+			</div>
+			<div class="left-menu-list pull-left">
+				<h1>shopping</h1>
+				<a href="#">Courter Services</a>
+				<a href="#">Logistics Distribution</a>
+				<a href="#">Onsite Services</a>
+				<a href="#">Stores must</a>			
+			</div>
+			<div class="left-menu-list pull-left">
+				<h1>Mode of Payment</h1>
+				<a href="#">Cash on Delivery</a>
+				<a href="#">Online Pay</a>
+				<a href="#">Transfer</a>
+				<a href="#">By Cheque</a>			
+			</div>
+			<div class="left-menu-list pull-left">
+				<h1>After-sale Service</h1>
+				<a href="#">Receiving inspection</a>
+				<a href="#">Refund</a>
+				<a href="#">Return and exchange rules</a>			
+			</div>
+		</div>
+		<div class="right-tel pull-right">
+			<div class="tel-box clearfix">
+				<h2 class="pull-left"><img src="../images/bottom_icon04.png" /></h2>
+				<h1 class="pull-left"><span>Join Hotline</span><span>400-123-6789</span></h1>
+			</div>
+			<div class="tel-box clearfix">
+				<h2 class="pull-left"><img src="../images/bottom_icon05.png" /></h2>
+				<h1 class="pull-left">
+					<span>Inviting Tenders</span>
+					<span>Mr.Liang：13998986666</span>
+					<span>Mr.Zhu：13998986666</span>
+					<span>Mr.Wang：13998986666</span>
+				</h1>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="bottom-section03">
+	<div class="container bottom-menu clearfix">
+		<a href="#">About Us</a>
+		<span>|</span>
+		<a href="#">Contact Us</a>
+		<span>|</span>
+		<a href="#">Contact Customer</a>
+		<span>|</span>
+		<a href="#">Cooperation</a>
+		<span>|</span>
+		<a href="#">Merchants help</a>
+		<span>|</span>
+		<a href="#">FriendLink</a>
+		<span>|</span>
+		<a href="#">Merchants settled</a>
+	</div>
+	<p><span>Value-added telecom business license：浙 B2-20080224 </span><span class="bottom-talk">Internet illegal and bad information report telephone：0571-81683755</span></p>
+	<p>Copyright © 2018-2047 Jicheng Company</p> 
+	<p>Company address：no 020 archery,qinhuai disstrict,jiangsu province</p>
+	<div class="link-img">
+		<div class="container text-center">
+			<a href="#"><img src="../images/bottom_link_pic01.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic02.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic03.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic04.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic05.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic06.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic07.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic08.png" /></a>
+		</div>
+	</div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/top_menu.js"></script>
+<script src="../js/left_menu.js"></script>
+<!--下拉菜单-->
+<script src="../js/app.min.js"></script>
+<script src="../js/bootstrap-select/js/bootstrap-select.min.js" type="text/javascript"></script>
+<script src="../js/components-bootstrap-select.min.js" type="text/javascript"></script>
+<!--下拉菜单-->
+<!--城市选择插件-->
+<script type="text/javascript" src="../js/fixdiv.js"></script>
+<script type="text/javascript" src="../js/address.js"></script>
+<!--城市选择插件-->
+<!--点击变换数字-->
+<script src="../js/bootstrap-touchspin/bootstrap.touchspin.js" type="text/javascript"></script>
+<script src="../js/components-bootstrap-touchspin.min.js" type="text/javascript"></script>
+<!--地址选择插件-->
+<script type="text/javascript" src="../js/address/Popt.js"></script>
+<script type="text/javascript" src="../js/address/city.json.js"></script>
+<script type="text/javascript" src="../js/address/citySet.js"></script>
+<!--地址选择插件-->
+<script type="text/javascript">
+    $(function() {
+        /** 更换小图片 */
+        $(".item a").hover(function(){
+            changeImg($(this))
+        });  
+//      地区选择
+$("#city").click(function (e) {
+	SelCity(this,e);
+});
+$("s").click(function (e) {
+	SelCity(document.getElementById("city"),e);
+});
+    });
+    function changeImg(obj){
+        if(obj.find("img").attr("alt")=="small"){
+            var temp_big_src = obj.siblings('a').find('img[alt=big]').attr('src');
+            var temp_big_url = obj.siblings('a[class=big-photo]').attr('href');
+            var temp_small_src = obj.find('img').attr('src');
+            var temp_small_url = obj.attr('href');
+            obj.siblings('a').find('img[alt=big]').attr('src',temp_small_src);
+        }
+    }
+    
+//  商品详情切换图片效果
+//  评价删除图片
+$(function(){
+	$("#btn").click(function() {
+  	$('#d-img').remove();
+  	$(this).remove();
+	}); 
+});
+</script>
+</body>
+</html>

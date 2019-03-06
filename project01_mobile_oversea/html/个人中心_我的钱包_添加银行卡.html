@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/media.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="grey-bg">
+<div class="top-title top-title1">
+    <a href="#" class="back-btn" onclick="history.go(-1)"></a><span>Select bank card</span>
+    <a href="个人中心_我的钱包_添加银行卡2.html" class="pull-right add-address-btn"><img src="../images/add.png" alt=""></a>
+</div>
+<div class="main-content no-padding">
+    <div class="p-top01">
+        <div class="main-addcard clearfix">
+            <img src="../images/card_list.png" alt="建设银行" class="pull-left">
+            <div class="main-addcard-txt pull-left">
+                <h3>VISA</h3>
+                <p>No.<span>1234</span>cash card</p>
+            </div>
+            <div class="main-addcard-add addcard-active pull-right"></div>
+        </div>
+        <div class="main-addcard clearfix">
+            <img src="../images/card_list.png" alt="工商银行" class="pull-left">
+            <div class="main-addcard-txt pull-left">
+                <h3>VISA</h3>
+                <p>No.<span>1234</span>cash card</p>
+            </div>
+            <div class="main-addcard-add pull-right"></div>
+        </div>
+    </div>    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script>
+    $('.main-addcard').click(function(){
+        $(this).find('.main-addcard-add').addClass('addcard-active');
+        $(this).siblings().find('.main-addcard-add').removeClass('addcard-active')
+    })
+</script>
+</body>
+</html>

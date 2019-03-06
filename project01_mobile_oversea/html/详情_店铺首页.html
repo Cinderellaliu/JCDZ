@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/city.min.css">
+    <link href="../css/swiper.min.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/media.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="top-title top-title03">
+    <div class="clearfix">
+        <a href="#" class="back-btn" onclick="history.go(-1)"></a>
+        <input type="text" class="top-search-input" placeholder="Search">
+        <a href="javascript:void(0);" class="top-rightmenu-btn"></a>
+        <div class="top-rightmenu-content">
+            <span class="arrow"></span>
+            <a href="#"><img src="../images/top_rightmenu_icon01.png" />Message</a>
+            <a href="#"><img src="../images/top_rightmenu_icon02.png" />Home</a>
+            <a href="#"><img src="../images/top_rightmenu_icon04.png" />Enjoy</a>
+            <a href="详情_店铺首页_详情.html"><img src="../images/top_rightmenu_icon05.png" />Details</a>
+        </div>
+    </div>
+    <div class="shop-info-box clearfix">
+        <img src="../images/index_top_photo.png" />
+        <div class="shop-info">
+            <h1>Versace</h1>
+            <p>The store scored 10 points.</p>
+        </div>
+        <a href="#" class="attention-btn">Follow</a>
+    </div>
+</div>
+<div class="main-content shop-content">
+    <div class="shop-home clearfix">
+        <a href="" class="active">Home</a>
+        <a href="">Customization</a>
+        <a href="">Integration-made</a>
+        <a href="">Design</a>
+        <a href="">News</a>
+    </div>
+    <div id="">
+        <div class="swiper-container shop-banner">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="../images/shop_banner.png" alt="首页banner">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../images/shop_banner.png" alt="首页banner">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../images/shop_banner.png" alt="首页banner">
+                </div>
+            </div>
+            <div class="swiper-pagination main-pagination"></div>
+        </div>
+        <div class="main-home-groups">
+            <div class="main-home-item">
+                <div class="main-home-list shop-list">
+                    <a href="#" class="main-clothes-item pull-left">
+                        <img src="../images/index_furniture_pic01.png" alt="杯子">
+                        <div class="clothes-item-price clearfix">
+                            <p class="pull-left">$<span>849</span></p> 
+                        </div>
+                        <p class="clothes-item-txt">Echo (2nd Generation</p> 
+                    </a>
+                    <a href="#" class="main-clothes-item pull-left">
+                        <img src="../images/index_furniture_pic02.png" alt="手表">
+                        <div class="clothes-item-price">
+                            <p class="clothes-item-price">$<span>1197</span></p>
+                        </div>
+                        <p class="clothes-item-txt">Naivo 18K Rose Gold</p>
+                    </a>  
+                    <a href="#" class="main-clothes-item pull-left">
+                        <img src="../images/index_furniture_pic03.png" alt="麋鹿">
+                        <div class="clothes-item-price clearfix">
+                            <p class="pull-left">$<span>99</span></p>
+                        </div>
+                        <p class="clothes-item-txt">Umbra Anigram Ring Holde</p>
+                    </a>
+                    <a href="#" class="main-clothes-item pull-left">
+                        <img src="../images/index_furniture_pic04.png" alt="数据线">
+                        <div class="clothes-item-price clearfix">
+                            <p class="pull-left">$<span>35</span></p> 
+                        </div>
+                        <p class="clothes-item-txt">USB Cable with Gold-Plated</p>
+                        <span>Design</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="detail-bottom-menu clearfix">
+    <div class="shop-bottom-menu">
+       <a href="详情_店铺首页_分类.html"><span>Classifys</span></a>
+       <a href="详情_店铺首页_排行榜.html"><span>TOP</span></a>
+       <a href="#"><span>Contact Us</span></a>
+    </div>
+    <a href="#" class="service-btn"><img src="../images/index_bottom_service_icon.png" /></a>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/top_rightmenu.js"></script>
+<script src="../js/city.js"></script>
+<script src="../js/swiper.min.js"></script>
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+        loop: true,
+        autoplay: 1000,
+        pagination: '.swiper-pagination',
+      })            
+</script>
+</body>
+</html>

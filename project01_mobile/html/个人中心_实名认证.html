@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/webuploader.css">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/media.css" rel="stylesheet">
+    
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="grey-bg">
+<div class="top-title">
+    <a href="#" class="back-btn" onclick="history.go(-1)"></a>实名认证
+</div>
+<div class="main-content no-padding">
+    <div class="p-top01">
+        <form class="real">
+            <div class="form-group form-real clearfix">
+                <label for="exampleInputEmail1" class="real-name">真实姓名</label>
+                <input type="text" class="form-control name-inp" id="exampleInputEmail1" placeholder="请填写您的真实姓名">
+            </div>
+            <div class="form-group form-real clearfix">
+                <label for="exampleInputPassword1" class="real-number">身份证号</label>
+                <input type="number" class="form-control number-inp" id="exampleInputPassword1" placeholder="请填写您的身份证号">
+            </div>
+            <div class="form-group form-real up clearfix">
+                <label for="exampleInputPassword1" class="real-number">身份证明</label> 
+                <div id="filePicker" class="pic-num1 clearfix">
+                    <img src="../images/real_pic.png" alt="" class="real-pic1">
+                    <img src="../images/real_pic.png" alt="" class="real-pic2">
+                </div>    
+            </div>
+        </form>
+    </div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/webuploader.min.js"></script>
+<script>
+    $(function(){
+            var uploader = WebUploader.create({
+            auto:true,
+            swf: '../css/Uploader.swf',
+            // server: '../js/up.php',
+            pick: '#filePicker',
+            resize: false,
+            fileNumLimit: 1,
+        });
+    
+        //上传时显示文件信息
+        uploader.on( 'fileQueued', function( file ) {
+            var item =$('<div class="name-group pull-left"><div id="'+file.id+'"class="name-item thumbnail name-pic">'+'<img/></div>');
+            var img = item.find('img');
+            uploader.makeThumb(file,function(error,src){
+                img[0].src=src;
+                
+            },100,100);
+            $('.pic-num1').append(item);
+            $('.real-pic1').hide();
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/media.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="grey-bg">
+<div class="top-title top-title1">
+    <a href="#" class="back-btn" onclick="history.go(-1)"></a><span>Your Site</span>
+    <a href="个人中心_地址管理_新增.html" class="pull-right add-address-btn"><img src="../images/add.png" alt=""></a>
+</div>
+<div class="main-content no-padding">
+	<div class="p-top01">
+		<div class="address-box">
+	        <div class="address-box-top clearfix">
+	            <div class="clearfix">
+	                <span class="pull-left">Anna</span>
+	                <em class="pull-right">18679643589</em>
+	            </div>
+	            <input type="text" readonly="readonly" name="" value="206 victory avenue, Seattle, Washington">
+	        </div>
+	        <div class="address-box-bottom clearfix">
+	            <div class="address-box-bottom1 pull-left">
+	                <input type="radio" name="only-address" id="radio-add" class="radio-add2" checked="checked">
+	                <label for="radio-add"><span>Default Address</span></label>
+	            </div>
+	            <a class="del-add pull-right" href="javascript:void(0)">
+	                <img src="../images/delete.png" alt="">
+	                <span>Del</span>
+	            </a>
+	            <a class="pull-right" href="javascript:void(0)">
+	                <img src="../images/edit.png" alt="">
+	                <span>Edit</span>
+	            </a>
+	        </div>
+	    </div>
+	</div>
+	<div class="p-top01">
+		<div class="address-box">
+	        <div class="address-box-top clearfix" id="">
+	            <div class="clearfix">
+	                <span class="pull-left">Anna</span>
+	                <em class="pull-right">18679643589</em>
+	            </div>
+	            <input type="text" readonly="readonly" name="" value="206 victory avenue, Seattle, Washington">
+	        </div>
+	        <div class="address-box-bottom clearfix" id="div1">
+	            <div class="pull-left address-box-bottom1">
+	                <input type="radio" name="only-address" id="radio-add1" class="radio-add2" >
+	                <label for="radio-add1"><span>Default Address</span></label>
+	            </div>
+	            <a class="del-add pull-right" href="javascript:void(0)">
+	                <img src="../images/delete.png" alt="">
+	                <span>Del</span>
+	            </a>
+	            <a class="pull-right" href="javascript:void(0)">
+	                <img src="../images/edit.png" alt="">
+	                <span>Edit</span>
+	            </a>
+	        </div>
+	    </div>
+	</div>    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script>
+    $(function(){
+        $(".del-add span").click(function(){
+            $(this).parent().parent().parent().parent().remove();
+        });
+    });
+</script>
+</body>
+</html>

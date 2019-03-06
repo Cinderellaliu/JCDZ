@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/media.css">
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="grey-bg">
+<div class="top-title">
+    <a href="#" class="back-btn" onclick="history.go(-1)"></a>选择发票类型
+</div>
+<div class="main-content no-padding">
+    <div class="main-invoice">
+        <h3>发票类型</h3>
+        <ul class="nav nav-tabs invoice-nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">不开发票</a></li>
+            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">纸质发票</a></li>
+        </ul>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home"></div>
+            <div role="tabpanel" class="tab-pane" id="profile">
+                <div class="main-invoice-rise">
+                    <h3>发票抬头</h3>
+                    <div class="main-rise-btns"><button class="people-active">个人</button><button>企业</button></div>
+                    <input type="text" placeholder="请填写单位名称">
+                    <input type="text" placeholder="请填写纳税人识别号">
+                </div>
+                <div class="main-invoice-rise">
+                    <h3>发票内容</h3>
+                    <div class="main-rise-btns"><button class="people-active">商品明细</button><button>商品类别</button></div>
+                    <p class="rise-detail">发票内容将显示详细商品名称与价格信息</p>
+                    <p class="rise-cate">发票内容将显示本单商品所属类别（电器电子产品及配件）及价格信息</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-invoice-notice">
+        <h4>发票须知</h4>
+        <ol>
+            <li>选择纸质发票的订单付款后纳锐人识别号不可修改，请确认信息后付款。</li>
+            <li>请妥善保存发票，发生退货时请将纸质发票一并寄回。</li>
+        </ol>
+    </div>
+    <button class="btn btn-default main-invoice-btn">确定</button>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script>
+    $('.main-invoice-rise button').first().addClass('main-invoice-space');
+    $('.main-invoice-rise input').hide();
+    $('.rise-cate').hide();
+
+    $('.invoice-nav-tabs').on('click','li',function(){
+        if($(this).parent().find('li').first().is($(this))){
+            $(this).parent().prev().css('color','#868686');
+        }
+        else{
+            $(this).parent().prev().css('color','#242424');
+        }
+    })
+   
+    $('.main-invoice-rise').on('click','button',function(){
+        $(this).siblings().removeClass('people-active')
+        $(this).addClass('people-active');
+        if($(this).text()=='个人'){
+            $('.main-invoice-rise input').hide();
+            $(this).addClass('main-invoice-space');
+        }
+        if($(this).text()=='企业'){
+            $('.main-invoice-rise input').show();
+            $(this).prev().removeClass('main-invoice-space');
+        }
+        if($(this).text()=='商品类别'){
+            $('.rise-detail').hide();
+            $('.rise-cate').show();
+        }
+        if($(this).text()=='商品明细'){
+            $('.rise-detail').show();
+            $('.rise-cate').hide();
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+@media (max-width: 767px){
+    .bottom-menu{height:5rem;}
+    
+    .main-content.no-padding{margin-bottom: 5rem;}
+    .main-content.m-bottom0{margin-bottom: 0;}
+    .top-title .top-rightmenu-btn{background-size:36%;}
+    .top-rightmenu-content{width:38%}
+    .top-rightmenu-content>a>img{width:13.5%}
+    .detail-bottom-menu{height:4.3rem;line-height: 4.3rem}
+
+    /*.attention-list a>img{width:14%;}*/
+    .msg-tab .attention-list a>img{right:20%;width:2%;}
+    /*.search-top{width:86%;}*/
+    .top-search-input{background: url("../images/top_search_bg.png") no-repeat 32% center #fff;background-size: 3.7%;}
+    .search-top-box02 .top-search-input{background: #fff}
+
+
+
+    /*.main-content-top .user-img{width:20%;}*/
+    /*.main-content-top .content-right{margin-left:5%}*/
+    .main-content-box .main-con-box>img{width:2.3%}
+    
+    .main-con-box.con-box-border em{right:3rem}
+    a.add-address-btn img{width:36%;}
+    
+    
+    
+    .main-clothes-item{width:48%;margin-right:4%}
+    .main-clothes-item:nth-child(3n){margin-right:4%;}
+    .main-clothes-item:nth-child(2n){margin-right:0;}
+    .main-custom-txt{margin-top:0;}
+    .login-top img{width:20%;}
+    .login-away .qq img,.login-away .weixin img,.login-away .personal img{width:24%;}
+    
+    
+    .list-page1 .right-page{margin-top:0;}
+    .main-news-item>img{width: 29%}
+    
+    
+    .store-order .store-box-content .store-con-right{width:71%}
+
+
+
+    .list-page1 .right-page{width: calc(66% - 1rem)}
+    .screen-modal{width:67%;}
+    .main-car-shop>a>h3{background-size:5%}
+    .car-select-item>img{width:19%}
+    .main-car-detail{width: 44%}
+    .main-car-add{width:13.5%}
+    .main-car-btns{width: 55%}
+    .man-list{width:calc(50% - .5rem);}
+    .man-list:nth-child(2n){margin-right:0;}
+    .man-list:nth-child(3n){margin-right:.5rem;}
+
+
+
+    .main-evaluate-txt{margin-left:1.4rem;width:calc(88% - 1.4rem);}
+    
+    
+    /*.he-tou{width:20%;}*/
+    /*.he-arr,.he-arrow{width:2.3%}*/
+    .main-sure-price>img{width:19%;}    
+}
+@media (max-width: 630px){
+	.top-select{background-size:12%}
+    .detail-bottom-menu-left a>img{width:25%;}
+	.safe-box-top a.safe-item:nth-child(2)>img{width:8.5%;}
+	.safe-box-top a.safe-item:nth-child(1)>img{width:9%;}
+	.receive-box .control-a img{width:2%}
+	.account-box .account-box-left>img{width: 16%;}
+	.about-box a.about-box-item img{width:1.6%}
+	.main-addcard>img{width:9%;}
+    .detail-icon-share{width:3.6%;}
+    .detail-icon-love{width:4.4%;}
+    .main-evaluate-item>img{width:8%;}
+    .detail-shop-content>img{width:10%;}
+    .pic-size1 img{width:22%;}
+    .pic-size2 img,.pic-size3 img{width:32%;}
+    .all-pic{width:20%;}
+    .main-sure-icon{width:2.6%;margin:0 1rem 0 0;}
+    .main-sure-arrow{width:1.4%;}
+    .top-title03 .top-search-input{background: url("../images/top_search_bg.png") no-repeat 36% center #fff;background-size: 3.7%}
+    .main-method>li>img,.main-cash>img,.main-card>img{width:7%;}
+}
+@media (max-width: 530px){
+	.bottom-menu>a>img{width:25%;}
+	.top-select{background-size:15%}
+	.main-con-box.con-box-border img{width:1.86%}
+	.safe-box-top a.safe-item:nth-child(2)>img{width:10.5%;}
+	.safe-box-top a.safe-item:nth-child(1)>img{width:10%;}
+	.receive-box .control-a img{width:2.4%}
+	.store-order .store-box-content>img{width:18%;}
+	.account-box .account-box-left>img{width: 20%;}
+	.about-box a.about-box-item img{width:1.8%}
+	.main-addcard>img{width:11%;}
+	.main-home-goods>img{width:20%;}
+	.left-page{width:20%;}
+	.page-car{width:6%;}
+    .detail-icon-share{width:4%;}
+    .detail-icon-love{width:5%;}
+    .main-evaluate-item>img{width:10%;}
+    .detail-shop-content>img{width:13%;}
+    .detail-bottom-menu-left a>img{width:30%;}
+    .pic-size1 img{width:24%;}
+    .pic-size2 img,.pic-size3 img{width:36%;}
+    .all-pic{width:24%;}
+    .main-sure-icon{width:3.6%;margin:0.4rem 1rem 0 0;}
+    .main-sure-arrow{width:2.2%;}
+    .top-title03 .top-search-input{background: url("../images/top_search_bg.png") no-repeat 32% center #fff;background-size: 4.7%}
+    .main-method>li>img,.main-cash>img,.main-card>img{width:8%;}
+}
+@media (max-width: 430px){
+	.top-select{background-size:17%}
+	.safe-box-top a.safe-item:nth-child(2)>img{width:12.5%;}
+	.safe-box-top a.safe-item:nth-child(1)>img{width:13%;}
+	.receive-box .control-a img{width:2.6%}
+	.store-order .store-box-content>img{width:23%;}
+	.account-box .account-box-left>img{width: 23%;}
+	.about-box a.about-box-item img{width:2.5%}
+	.main-addcard>img{width:12%;}
+	.bottom-menu>a>img{width:30%;}
+	.main-home-goods>img{width:26%;}
+	.left-page{width:27%;}
+	.page-car{width:7%;}
+    .detail-icon-share{width:4.6%;}
+    .detail-icon-love{width:5.4%;}
+    .main-evaluate-item>img{width:12%;}
+    .detail-shop-content>img{width:15%;}
+    .detail-bottom-menu-left a>img{width:35%;}
+    .pic-size1 img{width:26%;}
+    .pic-size2 img,.pic-size3 img{width:40%;}
+    .all-pic{width:28%;}
+    .top-title03 .top-search-input{background: url("../images/top_search_bg.png") no-repeat 28% center #fff;background-size: 5%}
+    .main-method>li>img,.main-cash>img,.main-card>img{width:9%;}
+}
+@media (max-width: 375px){
+	.safe-box-top a.safe-item:nth-child(2)>img{width:14.5%;}
+	.safe-box-top a.safe-item:nth-child(1)>img{width:15%;}
+	.receive-box .control-a img{width:3%}
+	.store-order .store-box-content>img{width:27%;}
+	.main-addcard>img{width:13%;}
+    .detail-shop-content>img{width:17%;}
+    .detail-bottom-menu-left a>img{width:40%;}
+    .pic-size1 img{width:27%;}
+    .pic-size2 img,.pic-size3 img{width:45%;}
+    .main-sure-icon{width:5%;margin:0.4rem 1rem 0 0;}
+    .main-sure-arrow{width:2%;}
+    .top-title03 .top-search-input{background: url("../images/top_search_bg.png") no-repeat 24% center #fff;background-size: 5.7%}
+    .main-method>li>img,.main-cash>img,.main-card>img{width:10%;}
+}
+@media (max-width: 346px){
+    .attention-list i{padding:2% 3%;}
+    .attention-list a>h1,.attention-list a>img{margin-top:2%}
+    .attention-list{padding-left:1rem;}
+    .attention-list a{padding-bottom: 1rem;}
+    .msg-tab .attention-list i{padding:1.5rem 1rem;}
+    .msg-tab .attention-list a{padding-bottom: 0}
+    .detail-recommed-txt,.detail-recommed-tit{font-size: 1.2rem}
+}
